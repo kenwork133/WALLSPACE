@@ -1,6 +1,6 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.1",
   "channel": "beta",
-  "downloadUrl": "https://github.com/kenwork133/WALLSPACE/releases/tag/v0.7.0-beta.1",
-  "sha256": "ADB49D9F1C6351FEDA4B8CEDCCB6694676612853C26009D914916CBE32B20C56"
+  "downloadUrl": "https://github.com/kenwork133/WALLSPACE/releases/download/v0.8.1-beta.1/WALLSPACE-0.8.1-beta.1-win-x64.zip",
+  "sha256": "9849FC1CC0AC3E6963854B5FC8ACED6B881E2D2C4000B42B1AF28338A73BE703"
 }

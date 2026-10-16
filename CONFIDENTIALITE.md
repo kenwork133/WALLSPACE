@@ -1,21 +1,33 @@
-# Données de WALLSPACE — bêta 0.7.0
+# Données de WALLSPACE — version 0.8.1
 
-## Stockage sur votre PC
+## Données sur votre PC
 
-WALLSPACE conserve sa bibliothèque, ses préférences, sa session de bureau et ses journaux dans `%LOCALAPPDATA%\APP.WALLSPACE`. Les imports gérés sont copiés localement ; les fichiers originaux restent à leur emplacement. Les dossiers d'import et de téléchargement sont réglables. Les miniatures et les personnalisations restent locales. Les sauvegardes et transferts entre PC se font par packs que vous exportez vous-même.
+WALLSPACE conserve sa bibliothèque, ses préférences, sa session de bureau et ses journaux dans `%LOCALAPPDATA%\APP.WALLSPACE`. Les fichiers originaux restent à leur emplacement. Les imports gérés, miniatures et personnalisations restent locaux. Les sauvegardes et transferts se font par les packs que vous exportez vous-même.
 
-Le monitoring CPU/RAM et les informations d'écran sont traités localement. Les disponibilités des capteurs varient selon le matériel. Aucun envoi automatique de diagnostics ni de médias personnels n'est activé.
+Le monitoring CPU/RAM et les informations d’écran sont traités localement. Aucun envoi automatique de diagnostics, de photos, de vidéos, de miniatures, de chemins Windows, de préférences ou de personnalisations personnelles n’est activé.
 
-## Fonctions réseau facultatives
+## Compte facultatif
 
-La météo, si vous l'autorisez et choisissez une ville, contacte les services Open-Meteo nécessaires à la prévision. Une vérification de mises à jour peut contacter l'adresse de catalogue que vous avez configurée. Les serveurs contactés reçoivent les données techniques habituelles d'une connexion, notamment l'adresse IP. Aucun catalogue de mises à jour n'est configuré par défaut dans cette bêta.
+Le service officiel est préconfiguré. Lorsque vous utilisez volontairement les fonctions de compte, votre adresse e-mail, votre mot de passe et les codes de validation sont transmis par HTTPS au projet Supabase WALLSPACE. Supabase gère l’identité, l’authentification et les données actives du compte. Le projet de base est situé en région Stockholm. Les profils et droits d’accès aux créations officielles sont isolés entre comptes par les règles du serveur.
 
-Sans service de compte configuré, aucun compte ne se crée et aucune bibliothèque n'est envoyée. En cas d'utilisation volontaire d'un service Auth configuré, l'adresse e-mail et le mot de passe saisis sont transmis par HTTPS au serveur indiqué ; les jetons de session sont protégés localement par Windows DPAPI. Le mot de passe n'est pas enregistré par l'application. Les boutons de synchronisation de bibliothèque sont bloqués dans cette version.
+Le mot de passe n’est pas enregistré par WALLSPACE sur le PC. Les jetons de session nécessaires pour rester connecté sont protégés localement pour l’utilisateur Windows par DPAPI. Une session expirée peut nécessiter une nouvelle connexion. L’application ne contient aucune clé d’administration du service.
 
-La future base officielle est réservée aux profils et aux droits sur les créations officielles. Aucune photo, vidéo, miniature, chemin Windows, préférence ou personnalisation personnelle n'y est prévue. Un service public de comptes exige encore une configuration et des tests réels ; sa présence dans l'interface ne signifie pas qu'il est actif.
+Brevo transmet les e-mails de confirmation et de récupération à l’adresse que vous indiquez. Les prestataires reçoivent aussi les informations techniques nécessaires au fonctionnement et à la protection du service, notamment les adresses IP et les événements d’authentification ou de livraison. Leurs journaux techniques et sauvegardes suivent leurs propres règles de conservation.
 
-## Retrait et assistance
+Le compte ne synchronise pas votre bibliothèque personnelle entre PC. Les fonctions locales restent utilisables sans compte.
 
-La suppression d'un fond de la bibliothèque exige confirmation et ne supprime pas son fichier original. Retirer le dossier du programme conserve les données locales. Avant tout effacement volontaire de `%LOCALAPPDATA%\APP.WALLSPACE`, quitter WALLSPACE et exporter les sauvegardes utiles. Cet effacement local ne supprime pas un éventuel compte distant.
+## Autres fonctions réseau
 
-Les rapports de problème sont facultatifs. Vérifiez-les avant de les joindre à une demande publique. Utilisez les problèmes GitHub de ce dépôt pour une question générale ; ne publiez jamais un mot de passe, un jeton ou des données personnelles dans un ticket.
+La météo, si vous l’autorisez et choisissez une ville, contacte Open-Meteo. La recherche de mises à jour peut consulter le catalogue HTTPS que vous avez configuré. Ces fonctions ne transmettent pas les médias de votre bibliothèque ; les serveurs contactés reçoivent les informations habituelles d’une connexion.
+
+## Déconnexion et suppression
+
+Dans **Paramètres → Compte en ligne**, **Se déconnecter** ferme la session sur ce PC. **Supprimer mon compte** exige de confirmer le mot de passe actuel et de saisir `SUPPRIMER`. Le serveur exige une authentification récente par mot de passe et une session active, puis supprime uniquement le compte concerné, ses sessions et les lignes de profil et de droits qui lui appartiennent. La suppression est définitive pour les données actives du compte.
+
+Les fichiers personnels, la bibliothèque et les réglages sur votre PC sont conservés lors de cette suppression. Effacer le dossier local ou retirer le programme ne supprime pas le compte distant. La suppression d’un fond de la bibliothèque exige confirmation et conserve le fichier original.
+
+## Assistance
+
+Les rapports de problème sont facultatifs. Vérifiez leur contenu avant tout partage. Utilisez les [problèmes GitHub WALLSPACE](https://github.com/kenwork133/WALLSPACE/issues) pour les questions générales, sans publier vos e-mails, mots de passe, codes, jetons, fichiers personnels ou journaux bruts.
+
+Les conditions des prestataires sont disponibles auprès de [Supabase](https://supabase.com/privacy) et de [Brevo](https://www.brevo.com/fr/legal/privacypolicy/).
